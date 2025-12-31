@@ -9,7 +9,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
 
 # Install only required dependencies (no Java)
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    curl git unzip xz-utils zip libglu1-mesa ca-certificates lcov \
+    curl git unzip xz-utils zip libglu1-mesa ca-certificates lcov openssh-client \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Flutter (only the required version)

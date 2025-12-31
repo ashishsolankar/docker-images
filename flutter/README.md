@@ -6,6 +6,7 @@ Optimized Docker image for Flutter development, testing, and CI/CD automation. T
 - **Flutter 3.32.0** (stable channel)
 - **junitreport** - Pre-installed for test result reporting
 - **lcov & genhtml** - For code coverage generation
+- **SSH client** - For private repository access during `flutter pub get`
 - **No Android SDK or Java** - Keeps image size minimal
 - **Debian bullseye-slim** base for security and performance
 
@@ -60,6 +61,13 @@ flutter test --machine > test-results.json
 junitreport test-results.json --output TEST-report.xml
 ```
 
+### Working with Private Dependencies
+```bash
+# The image includes SSH client for private repository access
+# Ensure SSH keys are properly mounted and configured
+flutter pub get  # Works with private git dependencies
+```
+
 ## Directory Structure
 - `Dockerfile` – Optimized Flutter image definition
 - `scripts/` – Helper scripts (currently empty)
@@ -70,7 +78,7 @@ junitreport test-results.json --output TEST-report.xml
 - **Base**: debian:bullseye-slim
 - **Size**: ~500MB (optimized)
 - **Flutter Version**: 3.32.0 stable
-- **Available Tools**: flutter, dart, lcov, genhtml, junitreport, git, curl
+- **Available Tools**: flutter, dart, lcov, genhtml, junitreport, git, curl, ssh
 
 ## Contributing
 When making changes to this image:

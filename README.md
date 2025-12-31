@@ -17,6 +17,7 @@ Optimized Flutter image for running unit tests, code coverage, and CI/CD automat
 - Flutter 3.32.0 (stable channel)
 - Pre-installed `junitreport` for test reporting
 - `lcov` and `genhtml` for code coverage
+- `openssh-client` for private repository access during `flutter pub get`
 - Lightweight (~500MB) without Android SDK or Java
 
 **Usage:**
