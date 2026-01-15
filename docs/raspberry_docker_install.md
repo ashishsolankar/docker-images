@@ -1,24 +1,3 @@
-sudo apt update
-sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
-curl -fsSL https://get.docker.com -o get-docker.sh
-sudo usermod -aG docker $USER
-docker --version
-sudo apt install -y libffi-dev libssl-dev python3 python3-pip
-docker-compose --version
-docker ps
-docker ps -a
-docker images
-docker start <container_name_or_id>
-docker stop <container_name_or_id>
-docker rm <container_name_or_id>
-docker rmi <image_name_or_id>
-docker logs <container_name_or_id>
-docker stats
-docker exec -it <container_name_or_id> bash
-docker stats
-or
-top
-
 # Docker Installation and Common Commands on Raspberry Pi
 
 This guide explains how to install Docker on a Raspberry Pi, along with some common commands to manage containers and images. You can use this on multiple Pis for quick setup.
